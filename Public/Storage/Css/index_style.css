@@ -1,0 +1,490 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+* {
+    color: #414141;
+    font-size: 18px;
+    font-family: Nunito;
+}
+
+:root {
+    --fdfturqz: #00748D;
+    --colryel: #CB8606;
+    --colrgray: #f9f9f9;
+    --colwhit: #fff;
+
+
+    --clr-principal: linear-gradient(90deg, #004bd4, #0966c7);
+    --clr-black: #111;
+    --clr-chocolate: #352d2d;
+    --clr-dark: #2b364b;
+    --clr-blue: #0000ff;
+    --clr-punky-blue: #004bd4;
+    --clr-durty-blue: #0c40a1;
+    --clr-durty-blood: #4b1111;
+    --clr-punky-red: #ff6f6f;
+    --clr-warning-red: #cb4e4e;
+    --clr-durty-green: #12222d;
+    --clr-punky-green: #069706;
+    --clr-warning-yellow: #ffe06f;
+    --clr-gray: #d6e1e5;
+    --clr-clean-gray: #0000001a;
+    --clr-light-gray: #eee;
+    --clr-lighting: #e8f0fe;
+    --clr-white: #fff;
+    --clr-durty-white: #fbfcff;
+
+    --ff-poppins-reg: "poppins", sans-serif;
+    --ff-montserat-reg: "montserat", sans-serif;
+    --ff-lato-reg: "lato-regular", sans-serif;
+
+
+    --fonttitle: 20px;
+    --fontszh-hm1: 30px;
+    --fontszh-hm2: 20px;
+    --fontsz-oth-pg: 30px;
+    --fontszh-sst: 25px;
+    --fontszart: 20px;
+    --fontszasid: 16px;
+    --fontszauth: 14px;
+
+
+}
+
+/* *************************** reset */
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+}
+
+/* *************************** style of header and navbar */
+.divheader {
+    text-align: center;
+    background-color: var(--fdfturqz);
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    font-size: var(--fontszh-hm2);
+    padding-block: 0.2rem;
+
+}
+
+.divheader p>img {
+    padding: 15px;
+
+}
+
+.divheader p {
+    color: var(--colwhit);
+    font-family: FjallaO;
+    font-stretch: condensed;
+
+}
+
+.divheader>nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.divheader>nav>ul {
+    grid-area: navbar;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    justify-content: right;
+    flex-wrap: wrap;
+
+}
+
+.divheader>nav>ul>li>a {
+    text-decoration: none;
+    font-size: var(--fontszh-hm2);
+    color: var(--colwhit);
+    justify-items: end;
+    padding: 0.6em 1em;
+    font-family: FjallaO;
+    font-stretch: condensed;
+
+}
+
+.divheader>nav>ul>li>a:hover {
+    background-color: var(--colwhit);
+    color: #000;
+
+}
+
+.divheader p {
+    color: var(--colwhit);
+    grid-area: logo;
+    justify-items: center;
+    align-content: center;
+    font-size: var(--fon);
+
+
+}
+
+.header>div.path-repeat {
+    background-image: url(instructions/images/path.png);
+    background-repeat: repeat;
+    background-color: var(--fdfturqz);
+    min-height: 8.5px;
+
+}
+
+.header {
+    min-height: min-content;
+
+}
+
+/* ***************************** style of body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #f9f9f9;
+
+}
+
+section {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: FjallaO;
+    font-stretch: condensed;
+}
+
+.container {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1500px;
+
+}
+
+
+.container>div {
+    flex-basis: 40%;
+    width: 20%;
+
+}
+
+#img-gallery {
+    flex-basis: 60%;
+    height: 100%;
+}
+
+
+/* *************************** style of section 1 */
+/* *************************** style*/
+
+#img-gallery>div {
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2rem;
+}
+
+#img-gallery>div>img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 2.5px solid var(--fdfturqz);
+}
+
+#img-gallery>div>img#item3 {
+    grid-area: 1 / 3 / span 2 / 4;
+}
+
+#img-gallery>div>img#item5 {
+    grid-area: 2 / 1 / span 2 / 2;
+}
+
+#img-gallery>div>img#item10 {
+    grid-area: 3 / 4 / span 2 / 5;
+}
+
+#img-gallery>div>img#item12 {
+    grid-area: 4 / 2 / 6 / 3;
+}
+
+
+/* *************************** style of section2 */
+/* *************************** style*/
+
+cite {
+    color: var(--fdfturqz);
+}
+
+hr {
+    width: 100px;
+    color: #FDBC44;
+    ;
+    text-align: center;
+}
+
+cite::before {
+    content: url(./instructions/images/client.png);
+    padding-right: 0.5rem;
+
+}
+
+#sect-comment p::before {
+    content: url(./instructions/images/quote.png);
+    padding-right: 0.5rem;
+    padding-bottom: 50px;
+
+}
+
+#sect-comment>div {
+    overflow: auto;
+    height: 500px;
+}
+
+
+
+
+/* *************************** style of section3 */
+/* *************************** style*/
+
+
+
+.container>div>section:nth-child(2) h2 {
+    padding: 0.5rem;
+
+}
+
+.container>div>section:nth-child(2) ul>li {
+    list-style: url(./instructions/images/circle.png);
+
+}
+
+.container>div>section:nth-child(2) ul>li>p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-block: 0.5rem;
+
+}
+
+
+
+main.registrationPage {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registrationPage form {
+    max-width: 468px;
+    padding: 75px 50px;
+    background-color: var(--clr-white);
+    box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+}
+
+.registrationPage form h3 {
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 500px;
+}
+
+.registrationPage form div.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.registrationPage form div.inputBox input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: var(--clr-black);
+    background-color: var(--clr-lighting);
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.registrationPage form div.inputBox input:focus {
+    border: 1px solid var(--clr-light-gray);
+}
+
+.registrationPage form div.inputBox input[type="submit"] {
+    background: var(--clr-punky-blue);
+    color: var(--clr-white);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.msgBx {
+    position: absolute;
+    top: 20px;
+    right: -3px;
+    padding: 7px;
+    cursor: help;
+}
+
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+fieldset>div {
+    position: relative;
+}
+
+.msgBxError {
+    position: absolute;
+    display: none;
+    top: -118px;
+    right: -45px;
+    width: 210px;
+    padding: 6px;
+    color: var(--clr-warning-red);
+    background: var(--clr-warning-yellow);
+}
+
+.msgBx:hover .msgBxError {
+    display: block;
+}
+
+.msgBxValid {
+    color: var(--clr-punky-green);
+    cursor: text;
+    right: 1px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/* ***************************** style of h  */
+
+h1 {
+    text-transform: uppercase;
+    color: var(--colryel);
+    padding: 0.3em;
+    margin: 0.2em;
+
+
+}
+
+h1 {
+    font-size: var(--fontszh-hm1);
+}
+
+h2 {
+    color: var(--fdfturqz);
+    text-align: center;
+    padding: 0.5em
+}
+
+h2::after,
+h2::before {
+    content: "-";
+    font-weight: bold;
+    color: #CB8606;
+    padding: 7px;
+}
+
+
+/* ***************************** style of footer */
+footer {
+    text-align: center;
+    background-color: var(--fdfturqz);
+    display: flex;
+    column-gap: 5rem;
+    justify-content: space-around;
+    padding-block: 0.5rem;
+    align-items: center;
+
+}
+
+.footer>div:first-child>div {
+    text-align: center;
+    background-color: var(--fdfturqz);
+    display: flex;
+    column-gap: 5rem;
+    justify-content: space-around;
+    padding-block: 0.5rem;
+    align-items: center;
+
+}
+
+.footer>div:first-child>div>p {
+    font-family: FjallaO;
+    font-stretch: condensed;
+    font-size: var(--fontszh-hm2);
+
+}
+
+.footer #socialicon>a>i {
+    color: var(--colwhit);
+    font-size: 20px;
+    padding: 0.2rem;
+
+}
+
+.footer>div.path-repeat {
+    background-image: url(instructions/images/path.png);
+    background-repeat: repeat;
+    background-color: var(--fdfturqz);
+    min-height: 8.5px;
+
+}
+
+.footer>div:last-child {
+    text-align: center;
+    background-color: rgb(65, 65, 65);
+    padding: 0.5em;
+
+}
+
+.imgfoot {
+    width: 60px;
+
+}
+
+.footer div:first-child>p,
+a {
+    color: var(--colwhit);
+
+}
+
+.footer div:first-child>p>img {
+    margin: 0 auto;
+
+}
+
+.footer p,
+a {
+    color: var(--colwhit);
+
+}
+
+.footer a {
+    color: red;
+    text-decoration: none;
+
+}
