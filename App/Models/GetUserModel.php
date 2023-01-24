@@ -6,8 +6,6 @@ use Core\Base\Model;
 
 class GetUserModel extends Model{
 
-    //etablish connexion with database
-    const DB_CONNECT = static::getDB();
 
 
     /**
@@ -22,7 +20,7 @@ class GetUserModel extends Model{
         $req = "SELECT * FROM `users` WHERE  `users`.`user_email` = :email";
         
         //prepare and execute a request
-        $prepared_stmt = self::DB_CONNECT -> prepare($req);
+        $prepared_stmt = $db -> prepare($req);
         
         try {
             

@@ -206,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 location.assign('/sign-in');
               }
               if (response.code === 500) {
+                console.log(response.msg);
                 alert("Oups...Quelque chose s\'est mal passée...");
               }
               if (response.code === 422) {

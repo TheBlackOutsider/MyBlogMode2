@@ -16,18 +16,18 @@ class RegisterModel extends Model
     /**
      * register user
      */
-    public  function register($fname, $lname, $email, $pwd, $secret , $bday)
+    public  function register($fname, $lname, $email, $pwd, $token , $bday)
     {
 
         //request statements
-        $req = "INSERT INTO `users`( `role_id` `user_fname`, `user_lname`, `user_email`, `user_pwd`,`user_secret` `user_birthday`) VALUES
+        $req = "INSERT INTO `users`( `role_id`,`user_token`, `user_fname`, `user_lname`, `user_email`, `user_pwd`, `user_birthday`) VALUES
         (
             :roleid,
+            :token,
             :fname, 
             :lname,    
             :email,
             :pwd,
-            :mysecret,
             :bday
         )";
 
@@ -40,12 +40,12 @@ class RegisterModel extends Model
             ":lname" => $lname,
             ":email" => $email,
             ":pwd" => $pwd,
-            ":mysecret" => $secret,
+            ":token" => $token,
             ":bday" => $bday
         ];
 
 
-        static::__executeRequest($req, $var);
+       return static::__executeRequest($req, $var);
 
 
     }

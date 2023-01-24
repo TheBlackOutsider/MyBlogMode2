@@ -3,7 +3,7 @@
 
 
 
-<main class="loginPage">
+<main class="loginPage" id="loginPage">
 
     <form action="/login" method="post">
 

@@ -37,7 +37,7 @@ export class ValidationUtils {
    * - Using: emailChecker(emailValue);
    */
   static emailChecker(emailEntry) {
-    if (emailEntry.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+?(?:\.com|\.org|\.co\.uk|\.org\.uk)$/i)) {
+    if (emailEntry.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+?(?:\.com|\.org|\.co|\.uk|\.org|\.fr|\.bj|\.ru|\.uk)$/i)) {
       return true;
     } else {
       return false;

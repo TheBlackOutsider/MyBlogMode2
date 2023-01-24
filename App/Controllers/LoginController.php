@@ -32,7 +32,7 @@ class LoginController extends Controller
 
     if ($data) {
       //get user with user
-      $responses = GetUserModel::list($this->sanitize($data['login']));
+      $responses = GetUserModel::list($this->sanitize($data['email']));
 
       //Check if request has result (are found user);
       if (is_countable($responses) && count($responses) === 0) {
@@ -50,13 +50,13 @@ class LoginController extends Controller
       }
 
       //check if password match
-      if (is_countable($responses) && password_verify($data['pwd'], $responses[0]['user_password'])) {
+      if (is_countable($responses) && password_verify($data['pwd'], $responses[0]['user_pwd'])) {
         if (session_status() === PHP_SESSION_NONE) session_start();
 
         $_SESSION["user_id"] = $responses[0]["user_id"];
-        $_SESSION["user_profil"] = strtoupper($responses[0]["user_firstname"][0] . $responses[0]["user_lastname"][0]);
-        $_SESSION["user_name"] = $responses[0]["user_firstname"];
-        $_SESSION["user_role"] = $responses[0]["user_role"];
+        $_SESSION["user_profil"] = strtoupper($responses[0]["user_fname"][0] . $responses[0]["user_lname"][0]);
+        $_SESSION["user_name"] = $responses[0]["user_fname"];
+        $_SESSION["user_role"] = $responses[0]["role_id"];
       } else {
         View::render("/login.php", [
           "msgType" => "error",

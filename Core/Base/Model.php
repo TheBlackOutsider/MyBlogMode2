@@ -57,6 +57,8 @@ class Model
         try {
             
             $prp_stmt -> execute($var);
+            
+            $prp_stmt-> fetchAll(PDO::FETCH_ASSOC);
             //return a request result
             // \print_r($var);
             return 200;
